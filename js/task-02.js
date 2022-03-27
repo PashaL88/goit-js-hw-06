@@ -12,7 +12,6 @@ const array = ingredients.map((ingredient) => {
   ingredientEl.classList.add("ingridient-item");
   return ingredientEl;
 });
-
 console.log(array);
 
 const ingredientsEl = document.querySelector("#ingredients");
