@@ -20,14 +20,22 @@ const array = images.map((image) => {
   // img.setAttribute("alt", image.alt);
   // galleryEl.append(img);
   // return galleryEl;
-  const galleryEl = `<li class = "gallery-item"><img class = "image" src="${image.url}" alt="${image.alt}"></li>`;
+  const imageEl = `<li class = "gallery-item"><img class = "image" src="${image.url}" alt="${image.alt}" width = '300' height = '200' ></li>`;
 
-  return galleryEl;
+  return imageEl;
 });
-console.log(array);
+// console.log(array);
 
 const gallery = document.querySelector(".gallery");
 // gallery.append(...array);
 // const string = array.join("");
 // console.log(string);
 gallery.insertAdjacentHTML("beforeend", array.join(""));
+
+// CSS styles
+gallery.style.display = "flex";
+gallery.style.listStyle = "none";
+const galleryItem = gallery.querySelectorAll(".gallery-item");
+galleryItem.forEach((el) => {
+  el.style.marginLeft = "10px";
+});

@@ -1,5 +1,6 @@
 const itemEl = document.querySelectorAll("li.item");
 console.log(`Number of categories: ${itemEl.length}`);
+console.log(itemEl);
 for (const item of itemEl) {
   const titleEl = item.querySelector("h2");
   console.log(`Category: ${titleEl.textContent}`);
